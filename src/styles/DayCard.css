@@ -1,0 +1,115 @@
+.day-detail {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.day-detail h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.day-content {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.day-content h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.day-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+}
+
+.received-button {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  background-color: rgba(0, 128, 0, 0.2);
+  border-color: #00cc00;
+  color: #ffffff;
+}
+
+.received-button:hover {
+  background-color: rgba(0, 128, 0, 0.4);
+}
+
+.received-button.toggle {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-color: #cc0000;
+}
+
+.received-button.toggle:hover {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+.received-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 12px 25px;
+  background-color: rgba(0, 128, 0, 0.3);
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  max-width: 200px;
+}
+
+.received-badge .checkmark {
+  position: static;
+  color: #00cc00;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.special-day {
+  background-color: rgba(255, 215, 0, 0.1);
+  border: 2px solid gold;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.special-day h2 {
+  color: gold;
+}
+
+.received-item {
+  background-color: rgba(0, 128, 0, 0.2);
+  border: 2px solid #00cc00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}

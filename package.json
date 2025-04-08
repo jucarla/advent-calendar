@@ -1,0 +1,30 @@
+{
+  "name": "advent-calendar",
+  "version": "1.0.0",
+  "description": "May 2025 Advent Calendar",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.4",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.13.3",
+    "ts-loader": "^9.4.2",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.2",
+    "css-loader": "^6.7.3"
+  }
+}

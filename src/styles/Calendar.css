@@ -1,0 +1,90 @@
+.calendar {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.weekday {
+  text-align: center;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+}
+
+.day-card {
+  aspect-ratio: 1.5/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.day-card:hover:not(.empty):not(.disabled) {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.day-card.empty {
+  border: none;
+  background-color: transparent;
+  cursor: default;
+}
+
+.day-card.disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.day-card.special {
+  background-color: rgba(255, 215, 0, 0.2);
+  border-color: gold;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.day-card.received {
+  background-color: rgba(0, 128, 0, 0.3);
+  border-color: #00cc00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.star {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.checkmark {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: #00cc00;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.day-card.special.received .checkmark {
+  right: 25px;
+}
