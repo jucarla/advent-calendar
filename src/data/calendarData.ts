@@ -8,26 +8,26 @@ export interface CalendarItem {
 export const calendarData: CalendarItem[] = [
   {
     day: 1,
-    title: 'Ideia de Presente #1',
-    description: 'Um álbum de fotos personalizado com nossas memórias favoritas juntos.',
+    title: 'Presente #1',
+    description: 'Com calor eu te toco, com carinho eu deslizo.\nDomo cada fio, realço teu sorriso.\nSou simples por fora, mas mudo o teu dia...Quem sou eu?',
     received: false,
   },
   {
     day: 2,
-    title: 'Ideia de Presente #2',
-    description: 'Um pacote de dia de spa para relaxamento e rejuvenescimento.',
+    title: 'Presente #2',
+    description: 'O presente de hoje foi pensado para te ajudar e te incentivar a se tornar a médica mais FODA e linda desse mundo!\nEspero que seja o que você queria 😍',
     received: false,
   },
   {
     day: 3,
-    title: 'Ideia de Presente #3',
-    description: 'Ingressos para ver a banda ou artista favorito ao vivo.',
+    title: 'Presente #3',
+    description: 'Hoje eu quero te dar um presente, que na verdade vai ser nosso.\nMais um incentivo para as nossas farras gastronômicas!\nAgora baixa o app (se é que você não já tem) e vamos fazer o cadastro 👀',
     received: false,
   },
   {
     day: 4,
-    title: 'Ideia de Presente #4',
-    description: 'Uma experiência de aula de culinária para nós dois desfrutarmos juntos.',
+    title: 'Presente #4',
+    description: 'Sou cheiro, sou cor, sou pura emoção,\nCarrego nos galhos a tua paixão.\nSem dizer uma palavra, falo de amor...\nQuem sou eu, meu bem, com todo fervor? 👀🌹',
     received: false,
   },
   {
