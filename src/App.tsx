@@ -32,7 +32,7 @@ const App: React.FC = () => {
   // Calculate countdown to May 25, 2025
   const calculateCountdown = () => {
     const targetDate = new Date(2025, 4, 25); // May is 4 (zero-indexed)
-    const currentDate = new Date(2025, 30, 4); // [MB] testando countdown com data atual
+    const currentDate = new Date(2025, 4, 30); // [MB] testando countdown com data atual
 
     // Return 0 if the date has passed
     if (currentDate > targetDate) {
