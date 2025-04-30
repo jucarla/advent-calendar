@@ -17,8 +17,15 @@ const Calendar: React.FC<CalendarProps> = ({ onDaySelect, gifts }) => {
   // Create an array of day numbers for May 2025 (1-31)
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
 
+  // Get the current day of the month
+  const today = new Date()
+  const currentDay = 5;
+  const currentMonth = today.getMonth();
+  const currentYear = today.getFullYear();
+
   // Helper to check if a day is within the calendar range (1-25)
-  const isInRange = (day: number) => day >= 1 && day <= 25;
+  const isInRange = (day: number) => 
+    currentYear === 2025 && currentMonth === 3 && day === currentDay;
 
   // Helper to check if a day is the special day (25)
   const isSpecialDay = (day: number) => day === 25;
