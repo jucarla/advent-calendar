@@ -19,13 +19,13 @@ const Calendar: React.FC<CalendarProps> = ({ onDaySelect, gifts }) => {
 
   // Get the current day of the month
   const today = new Date()
-  const currentDay = 5;
+  const currentDay = today.getDate();
   const currentMonth = today.getMonth();
   const currentYear = today.getFullYear();
 
   // Helper to check if a day is within the calendar range (1-25)
   const isInRange = (day: number) => 
-    currentYear === 2025 && currentMonth === 3 && day === currentDay;
+    currentYear === 2025 && currentMonth === 4 && day === currentDay;
 
   // Helper to check if a day is the special day (25)
   const isSpecialDay = (day: number) => day === 25;
