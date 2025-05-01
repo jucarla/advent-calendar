@@ -32,7 +32,7 @@ const App: React.FC = () => {
   // Calculate countdown to May 25, 2025
   const calculateCountdown = () => {
     const targetDate = new Date(2025, 4, 25); // May is 4 (zero-indexed)
-    const currentDate = new Date();
+    const currentDate = new Date(); // [MB] testando countdown com data atual
 
     // Return 0 if the date has passed
     if (currentDate > targetDate) {
@@ -74,8 +74,10 @@ const App: React.FC = () => {
   return (
     <div className="app-container">
       <header>
-        <h1>Check list de presentes</h1>
-        <div className="countdown">
+        <h1>Checklist de presentes</h1>
+        <h2>✨ Feliz mês de aniversário, meu amor ✨</h2>
+        <div 
+        className="countdown">
           <div className="countdown-box">
             <div className="countdown-value">{countdown.days}</div>
             <div className="countdown-label">dias</div>
