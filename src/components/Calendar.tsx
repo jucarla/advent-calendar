@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Calendar.css';
 import { CalendarItem } from '../data/calendarData';
 
@@ -18,14 +18,17 @@ const Calendar: React.FC<CalendarProps> = ({ onDaySelect, gifts }) => {
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
 
   // Get the current day of the month
-  const today = new Date()
+  const today = new Date();
   const currentDay = today.getDate();
   const currentMonth = today.getMonth();
   const currentYear = today.getFullYear();
 
+  // State to track the last available day
+  const [lastAvailableDay, setLastAvailableDay] = useState(currentDay);
+
   // Helper to check if a day is within the calendar range (1-25)
-  const isInRange = (day: number) => 
-    currentYear === 2025 && currentMonth === 4 && day === currentDay;
+  const isInRange = (day: number) =>
+    currentYear === 2025 && currentMonth === 4 && day <= lastAvailableDay;
 
   // Helper to check if a day is the special day (25)
   const isSpecialDay = (day: number) => day === 25;
@@ -34,6 +37,16 @@ const Calendar: React.FC<CalendarProps> = ({ onDaySelect, gifts }) => {
   const isReceived = (day: number) => {
     const gift = gifts.find((g) => g.day === day);
     return gift ? gift.received : false;
+  };
+
+  // Handle day click
+  const handleDayClick = (day: number) => {
+    if (isInRange(day)) {
+      onDaySelect(day);
+      if (day === lastAvailableDay && day < 25  ) {
+        setLastAvailableDay(day + 1); // Increment the last available day
+      }
+    }
   };
 
   return (
@@ -60,7 +73,7 @@ const Calendar: React.FC<CalendarProps> = ({ onDaySelect, gifts }) => {
               ${!isInRange(day) ? 'disabled' : ''} 
               ${isSpecialDay(day) ? 'special' : ''} 
               ${isReceived(day) ? 'received' : ''}`}
-            onClick={() => (isInRange(day) ? onDaySelect(day) : null)}
+            onClick={() => handleDayClick(day)}
           >
             {day}
             {isSpecialDay(day) && <span className="star">★</span>}
