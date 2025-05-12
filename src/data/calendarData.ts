@@ -98,7 +98,7 @@ export const calendarData: CalendarItem[] = [
   },
   {
     day: 16,
-    title: 'Ideia de Presente #16',
+    title: 'Presente #16',
     description: 'Não sou flor, mas deixo o teu cheiro no ar,\nLeve, doce, feito jeito de amar.\nTe toco de leve, sou puro encanto...',
     received: false,
   },
