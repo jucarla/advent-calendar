@@ -75,7 +75,7 @@ export const calendarData: CalendarItem[] = [
   {
     day: 12,
     title: 'Presente #12',
-    description: 'O de hoje é um presente pra vocêaposentar um pouco as de suvaco, e pra guardar minha caretria kkkkk',
+    description: 'O de hoje é um presente pra você aposentar um pouco as de suvaco, e pra guardar minha caretria kkkkk',
     received: false,
   },
   {
